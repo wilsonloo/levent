@@ -28,6 +28,7 @@ build
 ------
 Need cmake 2.8 or newer.
 
+Modify CMakeLists.txt add your lua include dir
 Modify cmake.config properly and then run:
 ```
 cmake .

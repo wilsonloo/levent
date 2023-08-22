@@ -15,6 +15,10 @@ include(${levent_cmake})
 #message("compiler: ${CMAKE_C_COMPILER}")
 include_directories(${LUA_INCLUDE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/deps/http-parser)
 include_directories(${LUA_INCLUDE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/deps/libev)
+
+#add your lua include dir
+include_directories(${LUA_INCLUDE_DIR} /home/wilson/buildstation/lua-5.3.6_Linux54_64_lib/include/)
+
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/deps/libev/.libs/)
 if(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
     set(CMAKE_SHARED_LINKER_FLAGS "-undefined dynamic_lookup")
