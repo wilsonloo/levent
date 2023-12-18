@@ -126,7 +126,8 @@ function Waiter:get()
     if self.exception == nil then
         return self.value
     else
-        error(self.exception)
+        -- error(self.exception)
+        return nil
     end
 end
 

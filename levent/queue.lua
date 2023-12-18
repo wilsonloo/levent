@@ -125,7 +125,10 @@ function Queue:get(sec)
     if not ok then
         error(val)
     end
-    return self:_get()
+
+    if self.length > 0 then
+        return self:_get()
+    end
 end
 
 function Queue:join(sec)
